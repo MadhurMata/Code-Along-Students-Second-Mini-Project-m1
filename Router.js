@@ -15,12 +15,14 @@ Router.prototype.buildDom = function(url, parentElement){
   };
 };
 
-Router.prototype.generateLandingPage = function() {
-  page = new LandingPage(parentElement);
+Router.prototype.generateLandingPage = function(parentElement) {
+  this.page = new LandingPage(parentElement);
+  this.page.generate();
 };
 
-Router.prototype.generateMoviesPage = function() {
-  page = new MoviesPage(parentElement);
+Router.prototype.generateMoviesPage = function(parentElement) {
+  this.page = new MoviesPage(parentElement);
+  this.page.generate();
 };
 
 
